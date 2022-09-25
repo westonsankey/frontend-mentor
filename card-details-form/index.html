@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="main-grid">
+      <div class="grid-col-first"></div>
+      <div class="grid-col-second">
+        <div id="form" class="form">
+          <form>
+            <div class="form-input-container">
+              <label for="input-name">cardholder name</label>
+              <input
+                class="form-input"
+                id="input-name"
+                type="text"
+                placeholder="e.g. John Doe"
+              />
+              <p id="invalid-msg-name" class="invalid-msg"></p>
+            </div>
+
+            <div class="form-input-container">
+              <label for="input-num">card number</label>
+              <input
+                class="form-input"
+                id="input-num"
+                type="text"
+                placeholder="e.g. 0000 0000 0000 0000"
+              />
+              <p id="invalid-msg-num" class="invalid-msg"></p>
+            </div>
+
+            <div class="form-card-details">
+              <div class="form-card-date-details">
+                <div class="form-input-container">
+                  <label for="input-exp-month">exp. date (mm/yy)</label>
+                  <div class="form-input-flex">
+                    <div>
+                      <input
+                        class="form-input"
+                        id="input-exp-month"
+                        type="text"
+                        placeholder="MM"
+                        maxlength="2"
+                      />
+                      <p id="invalid-msg-exp-month" class="invalid-msg"></p>
+                    </div>
+                    <div>
+                      <input
+                        class="form-input"
+                        id="input-exp-year"
+                        type="text"
+                        placeholder="YY"
+                        maxlength="2"
+                      />
+                      <p id="invalid-msg-exp-year" class="invalid-msg"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-input-container form-card-cvc">
+                <label for="input-cvc">cvc</label>
+                <input
+                  class="form-input"
+                  id="input-cvc"
+                  type="text"
+                  placeholder="e.g. 123"
+                  maxlength="3"
+                />
+                <p id="invalid-msg-cvc" class="invalid-msg"></p>
+              </div>
+            </div>
+            <button id="btn-submit" class="btn btn-submit" disabled>
+              confirm
+            </button>
+          </form>
+        </div>
+
+        <div id="confirmation" class="confirmation">
+          <div class="check-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 check"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+            </svg>
+          </div>
+          <p class="confirmation-main-msg">thank you!</p>
+          <p class="confirmation-secondary-msg">
+            We've added your card details
+          </p>
+          <button id="btn-continue" class="btn">continue</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-front">
+      <div id="label-num"><p>0000 0000 0000 0000</p></div>
+      <div class="card-details">
+        <p id="label-name">john doe</p>
+        <p id="label-exp">
+          <span id="label-exp-month">00</span>/<span id="label-exp-year"
+            >00</span
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="card-back">
+      <p id="label-cvc">000</p>
+    </div>
+  </body>
+
+  <script src="src/script.js"></script>
+</html>

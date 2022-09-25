@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  position: relative;
+  min-width: 300px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid-col-first {
+  height: 38vh;
+  background-image: url("images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-col-second {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 400px;
+  margin: auto;
+}
+
+.form-input-container {
+  margin-bottom: 1.5rem;
+}
+
+.form-input-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form-input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid rgb(160, 160, 160);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.form-input.invalid {
+  border: 1px solid hsl(0, 64%, 53%);
+}
+
+.form-card-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-card-cvc {
+  width: 200px;
+}
+
+.form-card-date-details .form-input {
+  width: 70px;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: capitalize;
+  color: white;
+  background-color: hsl(278, 68%, 11%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background-color: hsl(278, 68%, 11%, 25%);
+  cursor: default;
+}
+
+.invalid-msg {
+  margin-top: 10px;
+  color: hsl(0, 64%, 53%);
+}
+
+.card-front {
+  background-image: url("images/bg-card-front.png");
+  width: 447px;
+  height: 245px;
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  box-shadow: 15px 16px 24px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.card-back {
+  background-image: url("images/bg-card-back.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 447px;
+  height: 245px;
+  position: absolute;
+  top: 40px;
+  left: 115px;
+  box-shadow: 15px 16px 24px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#label-num {
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  margin-top: 125px;
+}
+
+.card-details {
+  margin-top: 30px;
+  display: flex;
+  margin-left: 65px;
+  color: hsl(0, 0%, 100%);
+}
+
+#label-name {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#label-exp {
+  margin-left: auto;
+  margin-right: 40px;
+  letter-spacing: 3px;
+}
+
+#label-cvc {
+  margin-top: 111px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-left: 360px;
+  color: hsl(0, 0%, 100%);
+}
+
+.confirmation {
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+.check-container {
+  color: white;
+  background: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  padding: 16px 18px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.confirmation-main-msg {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.confirmation-secondary-msg {
+  font-size: 18px;
+  color: gray;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    position: relative;
+    min-width: 1400px;
+  }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-col-first {
+    height: 100vh;
+    background-image: url("images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .grid-col-second {
+    height: 100vh;
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-front {
+    top: 200px;
+    left: 125px;
+  }
+
+  .card-back {
+    top: 475px;
+    left: 175px;
+  }
+}
