@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(210, 60%, 98%);
+  font-family: "Plus Jakarta Sans";
+}
+
+.notification-container {
+  background-color: white;
+  padding: 20px 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 20px;
+}
+
+.header-left-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notification-count {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(219, 85%, 26%);
+  font-weight: bold;
+  font-size: 18px;
+  padding: 1px 8px;
+  border-radius: 5px;
+}
+
+.toggle-read {
+  color: rgb(88, 88, 88);
+}
+
+.notification {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.notification-active {
+  background-color: hsl(210, 60%, 98%);
+}
+
+.notification img {
+  height: 50px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.username:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+
+.notification-date {
+  color: hsl(219, 14%, 63%);
+  margin-top: 4px;
+}
+
+.post-title {
+  font-weight: bold;
+  color: hsl(219, 12%, 42%);
+  display: inline;
+}
+
+.post-title:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+
+.unread-indicator {
+  background-color: hsl(1, 90%, 64%);
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.notification-title::hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+
+.group-title {
+  font-weight: bold;
+  color: hsl(219, 85%, 26%);
+}
+
+.group-title:hover {
+  cursor: pointer;
+}
+
+.toggle-read {
+  cursor: pointer;
+}
+
+.toggle-read:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.notification-comment {
+  padding: 20px;
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid hsl(211, 68%, 94%);
+  border-radius: 8px;
+  color: hsl(219, 12%, 42%);
+}
+
+.notification-comment:hover {
+  cursor: pointer;
+  background-color: hsl(205, 33%, 90%);
+}
+
+@media (min-width: 600px) {
+  .notification-container {
+    width: 55%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+  }
+
+  .notification-count {
+    font-size: 18px;
+  }
+}
