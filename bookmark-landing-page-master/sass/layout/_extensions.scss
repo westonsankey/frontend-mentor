@@ -1,0 +1,61 @@
+.extensions {
+  margin-top: 6rem;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+  }
+
+  &__subheading {
+    margin-top: 1rem;
+    width: 40%;
+  }
+
+  &__cards {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.extension-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem 1rem 1rem;
+  border-radius: 10px;
+
+  &--second {
+    margin-top: 3rem;
+  }
+
+  &--third {
+    margin-top: 6rem;
+  }
+
+  &__logo {
+    height: 75px;
+  }
+
+  &__header {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  &__version-text {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  &__add-btn {
+    margin-top: 2rem;
+  }
+}

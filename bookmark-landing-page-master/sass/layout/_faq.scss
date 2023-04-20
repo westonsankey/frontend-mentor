@@ -1,0 +1,70 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+
+  &__header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+  }
+
+  &__text {
+    width: 60%;
+  }
+}
+
+.faq-accordion {
+  width: 50%;
+  margin-top: 2rem;
+
+  &__item {
+    border-bottom: 1px solid $light-gray;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 15px 0;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &__heading:hover {
+    color: $soft-red;
+  }
+
+  &__toggle {
+    stroke: $soft-blue;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &--active {
+      transform: rotate(180deg);
+      stroke: $soft-red;
+    }
+  }
+
+  &__content_container {
+    overflow: hidden;
+  }
+
+  &__content {
+    margin-top: -100%;
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+    transition: all 0.25s;
+
+    &--active {
+      margin-top: 0;
+    }
+  }
+}
