@@ -1,0 +1,42 @@
+.btn {
+  &--primary {
+    @include button-common;
+    background-color: $soft-blue;
+    color: $white;
+    font-weight: bold;
+    // box-shadow: 0px -8px 50px 16px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: $white;
+      box-shadow: inset 0px 0px 0px 2px $soft-blue;
+      color: $soft-blue;
+    }
+  }
+
+  &--secondary {
+    @include button-common;
+    background-color: $soft-red;
+    color: $white;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $white;
+      box-shadow: inset 0px 0px 0px 2px $soft-red;
+      color: $soft-red;
+    }
+  }
+
+  &--tertiary {
+    @include button-common;
+    background-color: #f8f8f8;
+    color: $darker-gray;
+    font-weight: bold;
+    // box-shadow: 0px -8px 50px 16px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: $white;
+      box-shadow: inset 0px 0px 0px 2px $darker-gray;
+      color: $darker-gray;
+    }
+  }
+}

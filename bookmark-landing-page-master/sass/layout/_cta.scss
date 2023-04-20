@@ -1,0 +1,39 @@
+.cta {
+  height: 16rem;
+  width: 100%;
+  background-color: $soft-blue;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__heading {
+    color: $white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &__text {
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    width: 20rem;
+    text-align: center;
+  }
+
+  &__form {
+    margin-top: 1rem;
+
+    &-input {
+      border: none;
+      border-radius: 3px;
+      height: 2rem;
+      font-size: 0.8rem;
+      padding-left: 15px;
+      width: 15rem;
+    }
+  }
+}
